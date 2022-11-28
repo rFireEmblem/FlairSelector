@@ -8,6 +8,7 @@
 		<title>r/Fire Emblem Flair Selector</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="main.css" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=.3, user-scalable=no" />
 		<noscript>
 			<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -16,11 +17,11 @@
 	<body onload = "generate();">
 
 			<div class='topframe'> 
+				<img src="./3h-top-frame-long.png">
 			
 			<div class='buttonBox'>
 			
 				<button onclick="filter('marth')"id="marthButton"> <img id="marthimg"src="title_cards/fe1-3.png"> </button>
-				<button onclick="filter('alm')"id="almButton"> <img id="almimg"src="title_cards/fe11-12.png"> </button>
 				<button onclick="filter('seliph')"id="seliphButton"> <img id="seliphimg"src="title_cards/fe2-15.png"> </button>
 				<button onclick="filter('leif')"id="leifButton"> <img id="leifimg"src="title_cards/fe4.png"> </button>
 				<button onclick="filter('roy')"id="royButton"> <img id="royimg"src="title_cards/fe5.png"> </button>
@@ -31,7 +32,8 @@
 				<button onclick="filter('corrin')"id="corrinButton"> <img id="corrinimg"src="title_cards/fe10.png"> </button>
 				<button onclick="filter('sothis')"id="sothisButton"> <img id="sothisimg"src="title_cards/fe13.png"> </button>
 				<button onclick="filter('itsuki')"id="itsukiButton"> <img id="itsukiimg"src="title_cards/fe14.png"> </button>
-				<button onclick="filter('misc')"id="miscButton"> <img id="miscimg"src="title_cards/fe16.png"> </button>
+				<button onclick="filter('misc')"id="miscButton"> <img id="miscimg"src="title_cards/fe16_sel.png"> </button>
+				<button onclick="showAll()"id="allButton"> <img id="allimg"src="title_cards/engage.png"> </button>
 				<button onclick="showAll()"id="allButton"> <img id="allimg"src="title_cards/tms.png"> </button>
 				<button onclick="showAll()"id="allButton"> <img id="allimg"src="title_cards/cipher.png"> </button>
 				<button onclick="showAll()"id="allButton"> <img id="allimg"src="title_cards/warriors.png"> </button>
@@ -46,6 +48,11 @@
 
 
 				<div class= icons id="main">
+		</div>
+
+		<div class='bottomframe'> 
+			<img src="./3h-bottom-frame.png">
+			
 		</div>
 
 				<div id='selector'>

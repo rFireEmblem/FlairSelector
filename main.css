@@ -1,3 +1,56 @@
+@font-face {
+    font-family: 'FEH';
+    src: url(./assets/feh.ttf) format("truetype");
+
+}
+
+body {
+ background-image: url("./assets/backdrops/garregMach.png");
+ background-attachment: fixed;
+ background-repeat: repeat-x;
+ background-position: center;
+ background-size: cover;
+ font-family: FEH;
+ color: white;
+
+
+
+
+}
+
+.icons{
+	text-align: center;
+	background-image: url("./3h-middle-frame.png");
+	background-repeat: repeat-y;
+	position: relative;
+	margin-top: -2.5px;
+	width: 1126px;
+	height: auto;
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+
+.topframe{
+	background-position: top;
+	background-repeat: no-repeat;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+	width: 1126px;
+	margin: auto;
+}
+
+
+.buttonBox{
+	z-index: 2;
+	text-align: center;
+	width: 1126px;
+	margin: -250px auto;
+	position: absolute;
+	text-align: center;
+}
+
 
 #clear {
 	left: 50px;
@@ -9,29 +62,33 @@
 	position: fixed;
 }
 
-#main button{
-	border:  none;
-	background: transparent;
-	size: 75px 75px;
+#main {
+	text-align: center;
 }
+
+#main button  {
+
+
+	display:inline-block;
+	padding: 4px;
+
+}
+
+#main button img {
+	height: 90px;
+	width: 90px;
+	
+	}
 
 a {
 	text-decoration: none;
 	display: inline-block;
 }
 
-.buttonBox{
-	
-	text-align: center;
-	width: 1300px;
-
-	height: 300px;
-	
-}
 
 
 .buttonBox button{
-	padding: 2px 2px;
+	padding: 2px 5px;
 }
 
 .buttonBox button img{
@@ -54,7 +111,7 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	left: 50%;
-	margin-left: -563px; /* Half of the width */
+	margin-left: -564px; /* Half of the width */
 }
 
 button {
@@ -90,8 +147,8 @@ button img{
 
 
 #portraitBox img {
-	width:  90px;
-	height: 90px;
+	width:  75px;
+	height: 75px;
 	vertical-align: middle;
 	padding: 7px;
 }
@@ -99,31 +156,14 @@ button img{
 #portraitBox{
 
 	vertical-align: middle;
-	margin-top: 20px;
+	margin-top: 15px;
 
 }
-
-.backButton{
-	z-index: 2;
-	text-align: center;
-	width: 1126px;
-	margin: -150px auto;
+.bottomframe{
+	background-position: top
+	background-repeat: no-repeat;
 	position: relative;
-}
-
-.backButton a {
-	display: inline-block;
 	text-align: center;
-	padding: 0px;
-
 }
 
-.back img{
-	height: 100px;
-	width: auto;
-}
 
-.back {
-	text-align: center;
-	display: inline-block;
-}
