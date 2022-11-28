@@ -11,6 +11,7 @@
 */
 
 const NUMBER_OF_ARRAYS = 42
+const games = ['archanea', 'sov', 'genealogy', 'thracia', 'seals', 'sword', 'stones', 'por', 'awakening', 'fates', 'threehouses', 'heroes', 'tms', 'warriors', 'other']
 let arrays = {};
 let selected = [];
 arrkeys = []
@@ -25,7 +26,7 @@ function clearSelects(){
 
     document.getElementById("portraitBox").innerHTML = tempstr
 
-    console.log(selected)
+   
 }
 
 
@@ -54,6 +55,26 @@ function addToBar(flaircode){
 }
 
 async function generate() {
+  let tempStr = ''
+
+  for (let i = 0; i < games.length; i++){
+    let flairs = data[games[i]]
+     console.log(games[i])
+    for (let j = 0; j < flairs.length; j++){
+      if(games[i] == 'other'){
+        console.log(flairs[j])
+      }
+
+      let file = flairs[j].substring(1, flairs[j].length-1) + '.png'
+      tempStr += `<button class="test" onclick="addToBar('${flairs[j]}')"> <img src="./all/${file}"> </button>`
+    }
+
+
+
+
+  }
+
+  /*
   let flairs = data;
   let arr = [];
   let keys = Object.keys(flairs)
@@ -80,6 +101,8 @@ async function generate() {
       tempStr += `<button class="test" onclick="addToBar('${arr[j]}')"> <img src="./test/${data[arr[j]]}"> </button>`
     }
   }
+
+  */
   document.getElementById("main").innerHTML = tempStr
 }
 

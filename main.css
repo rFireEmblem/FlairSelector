@@ -20,6 +20,27 @@ a {
 	display: inline-block;
 }
 
+.buttonBox{
+	
+	text-align: center;
+	width: 1300px;
+
+	height: 300px;
+	
+}
+
+
+.buttonBox button{
+	padding: 2px 2px;
+}
+
+.buttonBox button img{
+	width: 200px;
+	height: auto;
+	
+}
+
+
 
 #selector {
 	background-image: url("./blank.png");
