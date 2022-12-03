@@ -9,8 +9,10 @@
 
 */
 const NUMBER_OF_ARRAYS = 42
-const games = ['threehouses']
-// 'archanea', 'sov', 'genealogy', 'thracia', 'seals', 'sword', 'stones', 'por', 'awakening', 'fates', 'threehouses', 'heroes', 'tms', 'warriors', 'other'
+const games = ['threehouses', 'archanea', 'sov', 'genealogy', 'thracia', 'seals', 'sword', 'stones', 'por', 'rd', 'awakening', 'fates', 'feh', 'tms', 'warriors']
+let current = 'threehouses';
+//cipher
+
 let arrays = {};
 let selected = [];
 arrkeys = []
@@ -39,11 +41,41 @@ function addToBar(flaircode) {
   }
 }
 
+function filter(game){
+
+  console.log('test')
+
+  let nodes = document.getElementsByClassName(current)
+    for (let i = 0; i < nodes.length; i++) {
+      let hero = nodes[i];
+      hero.style.display = 'none';
+    }
+
+   
+ nodes = document.getElementsByClassName(game)
+ console.log(nodes)
+    for (let i = 0; i < nodes.length; i++) {
+      let hero = nodes[i];
+      hero.style.display = 'inline-block';
+    }
+
+  let id = `${current}img`;
+  let file = `title_cards/${current}.png`;
+  document.getElementById(id).src = file;
+
+  id = `${game}img`;
+  file = `title_cards/${game}_sel.png`;
+  document.getElementById(id).src = file;
+  current = game;
+
+}
+
 async function generate() {
-  let tempStr = '<br>'
+  let tempStr = ''
   for (let i = 0; i < games.length; i++) {
+    tempStr += `<div class="${games[i]}" style="display:none;"><br>`
     let entry = data[games[i]]
-    console.log(entry)
+   
     let selects = entry.sections;
     for (let j = 0; j < selects.length; j++) {
       tempStr += `<br><br>${selects[j]}<br><br>`
@@ -53,8 +85,18 @@ async function generate() {
         tempStr += `<button class="test" onclick="addToBar('${flair[k]}')"> <img src="./all/${file}"> </button>`
       }
     }
+    tempStr += "</div>"
   }
   document.getElementById("main").innerHTML = tempStr
+ 
+  let nodes = document.getElementsByClassName(`threehouses`)
+ 
+    for (let i = 0; i < nodes.length; i++) {
+     let hero = nodes[i];
+ 
+      hero.style.display = 'inline-block';
+    }
+    
 }
 
 function request(){

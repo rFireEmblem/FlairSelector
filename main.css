@@ -13,10 +13,13 @@ body {
  font-family: FEH;
  color: white;
 
-
-
-
 }
+
+.archanea, .sov, {
+	display: none;
+}
+
+
 
 .icons{
 	text-align: center;
