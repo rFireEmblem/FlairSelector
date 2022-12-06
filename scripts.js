@@ -12,8 +12,9 @@ const NUMBER_OF_ARRAYS = 42
 const games = ['threehouses', 'archanea', 'sov', 'genealogy', 'thracia', 'seals', 'sword', 'stones', 'por', 'rd', 'awakening', 'fates', 'feh', 'tms', 'warriors', 'cipher', 'engage']
 const buttons = ['archanea', 'sov', 'genealogy', 'thracia', 'seals', 'sword', 'stones', 'por', 'rd', 'awakening', 'fates', 'threehouses', 'engage', 'feh', 'tms', 'warriors', 'cipher']
 //const themes = ['archanea', 'sov', 'genealogy', 'thracia', 'seals', 'sword', 'stones', 'por', 'rd', 'awakening', 'fates', 'threehouses','engage', 'feh', 'tms']
-const themes = ['sov', 'stones', 'awakening', 'fates', 'threehouses', 'feh', ]
+const themes = ['sov', 'stones', 'awakening', 'fates', 'threehouses', 'feh', 'sword', 'archanea', 'genealogy', 'por', 'tms']
 let current = 'threehouses';
+let theme = 'threehouses';
 //cipher
 let arrays = {};
 let selected = [];
@@ -33,8 +34,15 @@ function generateButtonBar() {
   for (let j = 0; j < buttons.length; j++) {
     str += `<button onclick="filter('${buttons[j]}')">`
     for (let i = 0; i < themes.length; i++) {
-      str += `<img class='${themes[i]}' src="title_cards/${themes[i]}/${buttons[j]}.png" style="display:none;"`
-      if (themes[i] == buttons[j] || (themes[i] == 'sov' && buttons[j] == 'cipher') || (themes[i] == 'awakening' && buttons[j] == 'warriors')) {
+      str += `<img class='${themes[i]}theme' src="title_cards/${themes[i]}/${buttons[j]}.png" style="display:none;"`
+      if (themes[i] == buttons[j] || 
+        (themes[i] == 'sov' && buttons[j] == 'cipher') || 
+        (themes[i] == 'awakening' && buttons[j] == 'warriors') ||
+        (themes[i] == 'por' && buttons[j] == 'rd') ||
+        (themes[i] == 'feh' && buttons[j] == 'engage') ||
+        (themes[i] == 'genealogy' && buttons[j] == 'thracia') ||
+        (themes[i] == 'sword' && buttons[j] == 'seals')
+        ) {
         str += `id="${buttons[j]}img">`
       }
       else {
@@ -63,25 +71,83 @@ function addToBar(flaircode) {
 }
 
 function filter(game) {
+
   console.log('test')
   let nodes = document.getElementsByClassName(current)
-  console.log(nodes)
+
   for (let i = 0; i < nodes.length; i++) {
     let hero = nodes[i];
     hero.style.display = 'none';
   }
+
+  nodes = document.getElementsByClassName(`${theme}theme`)
+ 
+  for (let i = 0; i < nodes.length; i++) {
+    let hero = nodes[i];
+    hero.style.display = 'none';
+  }
+
+
+
+
   nodes = document.getElementsByClassName(game)
   console.log(nodes)
   for (let i = 0; i < nodes.length; i++) {
     let hero = nodes[i];
     hero.style.display = 'inline-block';
   }
+
+
+
+
+
   let id = `${current}img`;
-  let file = `title_cards/${current}/${current}.png`;
+  let file = `title_cards/${theme}/${current}.png`;
   document.getElementById(id).src = file;
 
   id = `${game}img`;
-  file = `title_cards/${game}/${game}_sel.png`;
+
+  theme = game;
+
+  switch(game){
+    case 'cipher':{
+      theme = 'sov'
+    }
+    break;
+       case 'warriors':{
+      theme = 'awakening'
+    }
+    break;
+       case 'thracia':{
+      theme = 'genealogy'
+    }
+    break;
+       case 'engage':{
+      theme = 'feh'
+    }
+    break;
+       case 'rd':{
+      theme = 'por'
+    }
+    break;
+       case 'seals':{
+      theme = 'sword'
+    }
+    break;
+
+  }
+
+
+  nodes = document.getElementsByClassName(`${theme}theme`)
+
+  for (let i = 0; i < nodes.length; i++) {
+    let hero = nodes[i];
+    hero.style.display = 'inline-block';
+  }
+
+
+
+  file = `title_cards/${theme}/${game}_sel.png`;
   document.getElementById(id).src = file;
   current = game;
   document.getElementsByTagName("body")[0].style.backgroundImage = `url(assets/backdrops/${game}.png)`
@@ -108,9 +174,16 @@ async function generate() {
     let hero = nodes[i];
     hero.style.display = 'inline-block';
   }
+
   id = `threehousesimg`;
   file = `title_cards/threehouses/threehouses_sel.png`;
   document.getElementById(id).src = file;
+
+  nodes = document.getElementsByClassName(`threehousestheme`)
+  for (let i = 0; i < nodes.length; i++) {
+    let hero = nodes[i];
+    hero.style.display = 'inline-block';
+  }
 
 }
 
