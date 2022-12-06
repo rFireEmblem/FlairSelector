@@ -22,16 +22,43 @@ arrkeys = []
 
 function clearSelects() {
   console.log('start')
-  selected = [];
-  let tempstr = "<button id='clear' onclick='clearSelects()'><img src=\"./clear.png\"></button>"
-  tempstr += `<button id='go' onclick='request()'> <img src="./go.png"> </button>`
-  document.getElementById("portraitBox").innerHTML = tempstr
+  selected.pop();
+
+   buttonhtml1= `<button id='clear' onclick='clearSelects()'><img id='clearimg' src="./title_cards/${theme}/clear.png"></button>`
+    buttonhtml2= `<button id='go' onclick='request()'><img id='goimg' src="./title_cards/${theme}/go.png"></button>`
+
+  flairhtml = document.getElementById('portraitBox').innerHTML
+  console.log(flairhtml)
+  let index = flairhtml.indexOf('</button>');
+  flairhtml = flairhtml.substring(index+9, flairhtml.length);
+  console.log(flairhtml)
+  flairhtml = flairhtml.split('<button')
+  flairhtml = flairhtml[0] 
+  console.log(flairhtml)
+  arr = flairhtml.split('>');
+  console.log(arr)
+  arr.pop();
+    arr.pop();
+   console.log(arr)
+  if(arr.length == 0){
+    flairhtml = "";
+  }
+  else {
+     flairhtml = arr.join('>')
+     flairhtml += '>'
+  }
+
+
+  document.getElementById('portraitBox').innerHTML =    buttonhtml1 + flairhtml + buttonhtml2
+  console.log( buttonhtml1 + flairhtml + buttonhtml2)
+
+
+  
 }
 
 function generateButtonBar() {
   let element = document.getElementById('buttonBox');
   let str = " "
-  let str2 =`<button id='clear' onclick='clearSelects()'> <img src="./clear.png"></button> <button id='go' onclick='request()'> <img src="./go.png"></button>`
   for (let j = 0; j < buttons.length; j++) {
     str += `<button onclick="filter('${buttons[j]}')">`
     for (let i = 0; i < themes.length; i++) {
@@ -55,8 +82,12 @@ function generateButtonBar() {
   element.innerHTML = str;
 }
 
+/*
 function generateSmallButtons() {
+    
+
   let element = document.getElementById('portraitBox');
+  let flairhtml = document.getElementById('flairs').innerHTML;
 
   let str =`<button id='clear' onclick='clearSelects()'>`
   let str2 = `<button id='go' onclick='request()'>`
@@ -69,25 +100,27 @@ function generateSmallButtons() {
     str += `</button>`
      str2 += `</button>`
   
-  element.innerHTML = str + str2;
+  element.innerHTML = str + "<div id='flairs'>" + flairhtml +  "</div>" + str2;
 }
-
+*/
 
 
 
 function addToBar(flaircode) {
+  buttonhtml1= `<button id='clear' onclick='clearSelects()'><img id='clearimg' src="./title_cards/${theme}/clear.png"></button>`
+   buttonhtml2= `<button id='go' onclick='request()'><img  id='goimg'  src="./title_cards/${theme}/go.png"></button>`
   if (selected.length == 5) {
     window.alert('You can only select up to 5 characters.')
     return;
   } else {
     selected.push(flaircode)
     console.log(selected)
-    let tempstr = "<button id='clear' onclick='clearSelects()'><img src=\"./clear.png\"></button>"
+    let tempstr = buttonhtml1;
     for (let i = 0; i < selected.length; i++) {
       tempstr += `<img src="./all/${selected[i].substring(1, selected[i].length-1)}.png">`
     }
-    tempstr += `<button id='go' onclick='request()'> <img src="./go.png"> </button>`
-    document.getElementById("portraitBox").innerHTML = tempstr
+    
+    document.getElementById('portraitBox').innerHTML = tempstr + buttonhtml2
   }
 }
 
@@ -171,7 +204,14 @@ function filter(game) {
   file = `title_cards/${theme}/${game}_sel.png`;
   document.getElementById(id).src = file;
   current = game;
+
+  document.getElementById('clearimg').src = `./title_cards/${theme}/clear.png`
+  document.getElementById('goimg').src = `./title_cards/${theme}/go.png`
   document.getElementsByTagName("body")[0].style.backgroundImage = `url(assets/backdrops/${game}.png)`
+
+
+
+
 }
 async function generate() {
   let tempStr = ''
