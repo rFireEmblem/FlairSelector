@@ -257,7 +257,7 @@ let data = {
         ":Fernand-2:",
         ":Berkut-2:",
         ":Rinea-2:",
-        ":Duma:",
+        
         //":Grima:",
         ":Hestia:",
         ":Marla:",
@@ -313,7 +313,8 @@ let data = {
         ":Rudolf-3:",
         ":Nuibaba:",
         ":Jedah:",
-        ":Mila:"
+        ":Mila:",
+        ":Duma:",
       ],
       [
         ":Alm-2:",
@@ -353,6 +354,9 @@ let data = {
         ":Jedah-2:"
       ],
       [
+        ":Alm_FE13:",
+        ":Celica_FE13:",
+        ":Celica-6:",
         ":Yuzu:",
         ":Yuzu-3:",
         ":Emma:",
@@ -409,6 +413,8 @@ let data = {
         ":Elm:",
         ":Letizia:",
         ":Embla:",
+        ":Seior:",
+        ":Gullveig:",
         ":Loki:",
         ":Thorr:"
       ],
@@ -444,7 +450,6 @@ let data = {
         ":Cordelia-3:",
         ":Olivia-3:",
         ":Owain-3:",
-        ":Anna-8:",
         ":CorrinF-3:",
         ":CorrinM-3:",
         ":Azura-3:",
@@ -458,12 +463,13 @@ let data = {
         ":Takumi-3:",
         ":Sakura-3:",
         ":Oboro-3:",
-        ":Niles-3:"
+        ":Niles-3:",
+        ":Anna-8:",
       ]
     ]
   },
   "fates": {
-    "sections": ["1st Generation Portraits", "2nd Generation Portraits", "Official Art"],
+    "sections": ["1st Generation Portraits", "2nd Generation Portraits", "Official Art", "Related"],
     "flairs": [
       [
         ":CorrinF-2:",
@@ -605,11 +611,27 @@ let data = {
         ":Flora:",
         ":Keaton-2:",
         ":Selkie-2:",
+      ],
+      [
+        ":CorrinF-3:",
+        ":CorrinM-3:",
+        ":Azura-3:",
+        ":Azura-4:",
+        ":Xander-3:",
+        ":Camilla-3:",
+        ":Leo-3:",
+        ":Elise-3:",
+        ":Ryoma-3:",
+        ":Hinoka-3:",
+        ":Takumi-3:",
+        ":Sakura-3:",
+        ":Oboro-3:",
+        ":Niles-3:"
       ]
     ]
   },
   "awakening": {
-    "sections": ["1st Generation Portraits", "2nd Generation Portraits", "1st Generation Official Art", "2nd Generation Official Art", "Einherjar"],
+    "sections": ["1st Generation Portraits", "2nd Generation Portraits", "1st Generation Official Art", "2nd Generation Official Art", "Einherjar", "Related"],
     "flairs": [
       [
         ":Chrom-3:",
@@ -743,11 +765,26 @@ let data = {
         ":Ephraim-4:",
         ":Elincia-8:",
         ":Ike-9:",
+      ],
+      [
+        ":Chrom-4:",
+        ":Chrom-2:",
+        ":Lucina-5:",
+        ":RobinF-2:",
+        ":RobinM-2:",
+        ":Lissa-3:",
+        ":Frederick-3:",
+        ":Virion-2:",
+        ":Tharja-4:",
+        ":Tharja-2:",
+        ":Cordelia-3:",
+        ":Olivia-3:",
+        ":Owain-3:",
       ]
     ]
   },
   "archanea": {
-    "sections": ["Shadow Dragon / New Mystery Portraits", "Shadow Dragon Official Art", "New Mystery Official Art", "Mystery of the Emblem Portraits", "BSFE Portraits"],
+    "sections": ["Shadow Dragon / New Mystery Portraits", "Shadow Dragon Official Art", "New Mystery Official Art", "Mystery of the Emblem Portraits", "BSFE Portraits", "Related"],
     "flairs": [
       [
         ":Marth_SD-1:",
@@ -989,6 +1026,34 @@ let data = {
         ":Lena-3:",
         ":Rickard-3:",
         ":Castor-3:",
+      ],
+      [
+        ":MarthFE13:",
+        ":Marth_14:",
+        ":Marth-W:",
+        ":Marth-E:",
+        ":Caeda_W:",
+        ":Caeda:",
+        ":Tiki-5:",
+        ":Tiki-3:",
+        ":Tiki-4:",
+        ":Tiki:",
+        ":Minerva-5:",
+        ":Palla:",
+        ":Palla-6:",
+        ":Palla-7:",
+        ":Catria:",
+        ":Catria-7:",
+        ":CatriaFE13:",
+        ":Est:",
+        ":Est-5:",
+        ":Est-2:",
+        ":Linde-8:",
+        ":Navarre-6:",
+        ":Navarre-4:",
+        ":Cain-3:",
+        ":Draug-3:",
+        ":Katarina-3:"
       ]
     ]
   },
@@ -1163,11 +1228,14 @@ let data = {
         ":Ishtar:",
         ":Julius:",
       ],
-      [":Ullr:"]
+      [":Seliph-5:",
+        ":Leif-7:",
+        ":Ullr:"
+      ]
     ]
   },
   "thracia": {
-    "sections": ["Portraits", "Official Art"],
+    "sections": ["Portraits", "Official Art", "Related"],
     "flairs": [
       [
         ":Leif-4:",
@@ -1327,6 +1395,9 @@ let data = {
         ":Raydrik:",
         ":Julius-3:",
       ],
+      [
+        ":Leif-7:",
+      ]
     ]
   },
   "seals": {
@@ -1469,12 +1540,17 @@ let data = {
         ":Idunn:",
       ],
       [
+        ":Roy-3:",
+        ":Roy-5:",
+        ":Lilina-3:",
+        ":Guin-3:",
+        ":Guin-4:",
         ":Elimine:",
       ]
     ]
   },
   "sword": {
-    "sections": ["Portraits", "Official Art"],
+    "sections": ["Portraits", "Official Art", "Related"],
     "flairs": [
       [":Lyn:",
         ":Eliwood-4:",
@@ -1603,11 +1679,23 @@ let data = {
         ":Merlinus-4:",
         ":Leila:",
         ":Guin-4:",
-      ]
+      ],
+      [
+        ":Lyn-4:",
+        ":Lyn-3:",
+        ":Eliwood-2:",
+        ":Eliwood:",
+        ":Hector-2:",
+        ":Hector:",
+        ":Bartre-2:",
+        ":Bartre:",
+          ":Karel-2:",
+        ":Karel:",
+        ]
     ]
   },
   "stones": {
-    "sections": ["Portraits", "Official Art"],
+    "sections": ["Portraits", "Official Art", "Related"],
     "flairs": [
       [":Eirika-2:",
         ":Ephraim-3:",
@@ -1707,11 +1795,15 @@ let data = {
         ":Valter:",
         ":Caellach:",
         ":Fomortiis:"
+      ],
+      [
+        ":Eirika-4:",
+        ":Ephraim-4:"
       ]
     ]
   },
   "por": {
-    "sections": ["Portraits", "Official Art"],
+    "sections": ["Portraits", "Official Art", "Related"],
     "flairs": [
       [
         ":Ike-7:",
@@ -1846,11 +1938,14 @@ let data = {
         ":Petrine:",
         ":BK-3:",
         ":Ashnard:",
+      ],
+      [":Ike-9:",
+        ":Elincia-8:"
       ]
     ]
   },
   "rd": {
-    "sections": ["Portraits", "Official Art"],
+    "sections": ["Portraits", "Official Art", "Related"],
     "flairs": [
       [":Micaiah-3:",
         ":Micaiah-1:",
@@ -2032,7 +2127,10 @@ let data = {
         ":Zelgius:",
         ":Ashera:",
       ],
-      ["Altina"]
+      [":Ike_Fates:",
+        ":Elincia-8:",
+        ":Altina:"
+      ]
     ]
   },
   "tms": {

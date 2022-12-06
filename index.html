@@ -4,57 +4,58 @@
 <script src="em.js"></script>
 
 <html>
-	<head>
-		<title>r/Fire Emblem Flair Selector</title>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="main.css" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=.3, user-scalable=no" />
-		<noscript>
-			<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
+<head>
+  <title>r/Fire Emblem Flair Selector</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="main.css" />
 
-	<body onload = "generateButtonBar();generate();">
+  <meta name="viewport" content="width=device-width, initial-scale=.3, user-scalable=no" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-			<div class='topframe'> 
-				<img src="./3h-top-frame-long.png">
-			
-			<div id="buttonBox" class='buttonBox'>
-		
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3ZJMQVEVY"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
 
-			</div>
-		</div>
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-V3ZJMQVEVY');
+  </script>
 
+</head>
 
+<body onload="generateButtonBar();generateSmallButtons();generate();">
 
+  <div class='topframe'>
+    <img src="./3h-top-frame-long.png">
 
+    <div id="buttonBox" class='buttonBox'>
 
+    </div>
+  </div>
 
+  <div class=icons id="main">
+  </div>
 
-				<div class= icons id="main">
-		</div>
+  <div class='bottomframe'>
+    <img src="./3h-bottom-frame.png">
 
-		<div class='bottomframe'> 
-			<img src="./3h-bottom-frame.png">
-			
-		</div>
+  </div>
 
-				<div id='selector'>
-			<div id='portraitBox'>
-				<button id='clear' onclick='clearSelects()'>
-					<img src="./clear.png">
-				</button>
-			
+  <div id='selector'>
+    <div id='portraitBox'>
+      <button id='clear' onclick='clearSelects()'>
+        <img src="./clear.png">
+      </button>
 
+      <button id='go' onclick='request()'>
+        <img src="./go.png">
+      </button>
+    </div>
+  </div>
 
-				<button id='go' onclick='request()'>
-					<img src="./go.png">
-				</button>
-			</div>
-		</div>
-
-	</body>
-
-
+</body>
 
 </html>

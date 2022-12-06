@@ -31,6 +31,7 @@ function clearSelects() {
 function generateButtonBar() {
   let element = document.getElementById('buttonBox');
   let str = " "
+  let str2 =`<button id='clear' onclick='clearSelects()'> <img src="./clear.png"></button> <button id='go' onclick='request()'> <img src="./go.png"></button>`
   for (let j = 0; j < buttons.length; j++) {
     str += `<button onclick="filter('${buttons[j]}')">`
     for (let i = 0; i < themes.length; i++) {
@@ -53,6 +54,26 @@ function generateButtonBar() {
   }
   element.innerHTML = str;
 }
+
+function generateSmallButtons() {
+  let element = document.getElementById('portraitBox');
+
+  let str =`<button id='clear' onclick='clearSelects()'>`
+  let str2 = `<button id='go' onclick='request()'>`
+
+    for (let i = 0; i < themes.length; i++) {
+      str += `<img class='${themes[i]}theme' src="title_cards/${themes[i]}/clear.png" style="display:none;">`
+      str2 += `<img class='${themes[i]}theme' src="title_cards/${themes[i]}/go.png" style="display:none;">`
+      
+    }
+    str += `</button>`
+     str2 += `</button>`
+  
+  element.innerHTML = str + str2;
+}
+
+
+
 
 function addToBar(flaircode) {
   if (selected.length == 5) {
