@@ -13,8 +13,8 @@ const games = ['threehouses', 'archanea', 'sov', 'genealogy', 'thracia', 'seals'
 const buttons = ['archanea', 'sov', 'genealogy', 'thracia', 'seals', 'sword', 'stones', 'por', 'rd', 'awakening', 'fates', 'threehouses', 'engage', 'feh', 'tms', 'warriors', 'cipher']
 //const themes = ['archanea', 'sov', 'genealogy', 'thracia', 'seals', 'sword', 'stones', 'por', 'rd', 'awakening', 'fates', 'threehouses','engage', 'feh', 'tms']
 const themes = ['sov', 'stones', 'awakening', 'fates', 'threehouses', 'feh', 'sword', 'archanea', 'genealogy', 'por', 'tms']
-let current = 'threehouses';
-let theme = 'threehouses';
+let current = 'engage';
+let theme = 'feh';
 //cipher
 let arrays = {};
 let selected = [];
@@ -230,17 +230,17 @@ async function generate() {
     tempStr += "</div>"
   }
   document.getElementById("main").innerHTML = tempStr
-  let nodes = document.getElementsByClassName(`threehouses`)
+  let nodes = document.getElementsByClassName(`engage`)
   for (let i = 0; i < nodes.length; i++) {
     let hero = nodes[i];
     hero.style.display = 'inline-block';
   }
 
-  id = `threehousesimg`;
-  file = `title_cards/threehouses/threehouses_sel.png`;
+  id = `engageimg`;
+  file = `title_cards/feh/engage_sel.png`;
   document.getElementById(id).src = file;
 
-  nodes = document.getElementsByClassName(`threehousestheme`)
+  nodes = document.getElementsByClassName(`fehtheme`)
   for (let i = 0; i < nodes.length; i++) {
     let hero = nodes[i];
     hero.style.display = 'inline-block';
