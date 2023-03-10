@@ -83,7 +83,7 @@ let data = {
     ]
   },
   "threehouses": {
-    "sections": ["Portraits", "Official Art"],
+    "sections": ["Portraits", "Official Art", "Related"],
     "flairs": [
       [
         ":M_Byleth:",
@@ -269,6 +269,12 @@ let data = {
         ":Seteth-2:",
         ":FlameEmp-2:",
         ":DK-2:"
+      ],
+      [
+        ":BylethM_E:",
+        ":Edelgard-E:",
+        ":Dimitri-E:",
+        ":Claude-E:",
       ]
     ]
   },
@@ -425,6 +431,7 @@ let data = {
         ":Alm_FE13:",
         ":Celica_FE13:",
         ":Celica-6:",
+        ":Celica_E:",
         ":Yuzu:",
         ":Yuzu-3:",
         ":Emma:",
@@ -437,7 +444,7 @@ let data = {
     ]
   },
   "feh": {
-    "sections": ["Portraits", "Exclusive"],
+    "sections": ["Portraits", "Exclusive", "Related"],
     "flairs": [
       [":Alfonse:",
         ":Sharena:",
@@ -490,7 +497,8 @@ let data = {
         ":Ullr:",
         ":Elimine:",
         ":Altina:",
-      ]
+      ],
+      [":Veronica-E:"]
     ]
   },
   "warriors": {
@@ -682,11 +690,13 @@ let data = {
       ],
       [
         ":CorrinF-3:",
+        ":CorrinF_E:",
         ":CorrinM-3:",
         ":Azura-3:",
         ":Azura-4:",
         ":Xander-3:",
         ":Camilla-3:",
+        ":Camilla-E:",
         ":Leo-3:",
         ":Elise-3:",
         ":Ryoma-3:",
@@ -837,9 +847,12 @@ let data = {
       [
         ":Chrom-4:",
         ":Chrom-2:",
+        ":Chrom-E:",
         ":Lucina-5:",
+        ":Lucina_E:",
         ":RobinF-2:",
         ":RobinM-2:",
+        ":RobinM-E:",
         ":Lissa-3:",
         ":Frederick-3:",
         ":Virion-2:",
@@ -1100,10 +1113,12 @@ let data = {
         ":Marth_14:",
         ":Marth-W:",
         ":Marth-E:",
+        ":Marth_E2:",
         ":Caeda_W:",
         ":Caeda:",
         ":Tiki-5:",
         ":Tiki-3:",
+        ":Tiki_E:",
         ":Tiki-4:",
         ":Tiki:",
         ":Minerva-5:",
@@ -1296,8 +1311,10 @@ let data = {
         ":Ishtar:",
         ":Julius:",
       ],
-      [":Seliph-5:",
+      [":Sigurd_E:",
+        ":Seliph-5:",
         ":Leif-7:",
+        ":Leif_E:",
         ":Ullr:"
       ]
     ]
@@ -1465,6 +1482,7 @@ let data = {
       ],
       [
         ":Leif-7:",
+        ":Leif_E:",
       ]
     ]
   },
@@ -1610,6 +1628,7 @@ let data = {
       [
         ":Roy-3:",
         ":Roy-5:",
+        ":Roy_E:",
         ":Lilina-3:",
         ":Guin-3:",
         ":Guin-4:",
@@ -1751,10 +1770,12 @@ let data = {
       [
         ":Lyn-4:",
         ":Lyn-3:",
+        ":Lyn_E:",
         ":Eliwood-2:",
         ":Eliwood:",
         ":Hector-2:",
         ":Hector:",
+        ":Hector-E:",
         ":Bartre-2:",
         ":Bartre:",
         ":Karel-2:",
@@ -1866,7 +1887,9 @@ let data = {
       ],
       [
         ":Eirika-4:",
-        ":Ephraim-4:"
+        ":Eirika_E:",
+        ":Ephraim-4:",
+        ":Ephraim-E:",
       ]
     ]
   },
@@ -2008,7 +2031,9 @@ let data = {
         ":Ashnard:",
       ],
       [":Ike-9:",
-        ":Elincia-8:"
+        ":Ike_E:",
+        ":Elincia-8:",
+        ":Soren-E:",
       ]
     ]
   },
@@ -2195,8 +2220,11 @@ let data = {
         ":Zelgius:",
         ":Ashera:",
       ],
-      [":Ike_Fates:",
+      [":Micaiah_E:",
+        ":Ike_Fates:",
+        ":Ike_E:",
         ":Elincia-8:",
+        ":Soren-E:",
         ":Altina:"
       ]
     ]
