@@ -12,9 +12,9 @@ const NUMBER_OF_ARRAYS = 42
 const games = ['threehouses', 'archanea', 'sov', 'genealogy', 'thracia', 'seals', 'sword', 'stones', 'por', 'rd', 'awakening', 'fates', 'feh', 'tms', 'warriors', 'cipher', 'engage']
 const buttons = ['archanea', 'sov', 'genealogy', 'thracia', 'seals', 'sword', 'stones', 'por', 'rd', 'awakening', 'fates', 'threehouses', 'engage', 'feh', 'tms', 'warriors', 'cipher']
 //const themes = ['archanea', 'sov', 'genealogy', 'thracia', 'seals', 'sword', 'stones', 'por', 'rd', 'awakening', 'fates', 'threehouses','engage', 'feh', 'tms']
-const themes = ['sov', 'stones', 'awakening', 'fates', 'threehouses', 'feh', 'sword', 'archanea', 'genealogy', 'por', 'tms']
+const themes = ['sov', 'stones', 'awakening', 'fates', 'threehouses', 'feh', 'sword', 'archanea', 'genealogy', 'por', 'tms', 'engage']
 let current = 'engage';
-let theme = 'feh';
+let theme = 'engage';
 //cipher
 let arrays = {};
 let selected = [];
@@ -28,18 +28,16 @@ function clearSelects() {
     buttonhtml2= `<button id='go' onclick='request()'><img id='goimg' src="./title_cards/${theme}/go.png"></button>`
 
   flairhtml = document.getElementById('portraitBox').innerHTML
-  console.log(flairhtml)
+
   let index = flairhtml.indexOf('</button>');
   flairhtml = flairhtml.substring(index+9, flairhtml.length);
-  console.log(flairhtml)
   flairhtml = flairhtml.split('<button')
   flairhtml = flairhtml[0] 
-  console.log(flairhtml)
+
   arr = flairhtml.split('>');
-  console.log(arr)
   arr.pop();
     arr.pop();
-   console.log(arr)
+
   if(arr.length == 0){
     flairhtml = "";
   }
@@ -48,11 +46,7 @@ function clearSelects() {
      flairhtml += '>'
   }
 
-
   document.getElementById('portraitBox').innerHTML =    buttonhtml1 + flairhtml + buttonhtml2
-  console.log( buttonhtml1 + flairhtml + buttonhtml2)
-
-
   
 }
 
@@ -67,7 +61,6 @@ function generateButtonBar() {
         (themes[i] == 'sov' && buttons[j] == 'cipher') || 
         (themes[i] == 'awakening' && buttons[j] == 'warriors') ||
         (themes[i] == 'por' && buttons[j] == 'rd') ||
-        (themes[i] == 'feh' && buttons[j] == 'engage') ||
         (themes[i] == 'genealogy' && buttons[j] == 'thracia') ||
         (themes[i] == 'sword' && buttons[j] == 'seals')
         ) {
@@ -176,10 +169,7 @@ function filter(game) {
       theme = 'genealogy'
     }
     break;
-       case 'engage':{
-      theme = 'feh'
-    }
-    break;
+
        case 'rd':{
       theme = 'por'
     }
@@ -237,10 +227,10 @@ async function generate() {
   }
 
   id = `engageimg`;
-  file = `title_cards/feh/engage_sel.png`;
+  file = `title_cards/engage/engage_sel.png`;
   document.getElementById(id).src = file;
 
-  nodes = document.getElementsByClassName(`fehtheme`)
+  nodes = document.getElementsByClassName(`engagetheme`)
   for (let i = 0; i < nodes.length; i++) {
     let hero = nodes[i];
     hero.style.display = 'inline-block';

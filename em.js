@@ -40,10 +40,15 @@ let data = {
         ":Seadall:",
         ":Lumera:",
         ":Veyle:",
+        ":Nel:",
+        ":Nil:",
         ":Zephia:",
+        ":Zelestia:",
         ":Griss:",
+        ":Gregory:",
         ":Mauveir:",
         ":Marni:",
+        ":Madeline:",
         ":Sommie:",
       ],
       [":Marth_E2:",
@@ -77,8 +82,12 @@ let data = {
         ":Diamant:",
         ":Ivy:",
         ":Timerra:",
-        ":Marth-E:",
+        ":Nel2:",
+        ":Nil2:",
         ":Veyle-2:",
+        ":Marth-E:",
+        
+
       ]
     ]
   },
@@ -489,7 +498,10 @@ let data = {
         ":Letizia:",
         ":Embla:",
         ":Seior:",
+        ":Heidr:",
+        ":Nerthuz:",
         ":Gullveig:",
+        ":Njordr:",
         ":Loki:",
         ":Thorr:"
       ],
