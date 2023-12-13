@@ -8,7 +8,6 @@ let data = {
         ":Vander:",
         ":Framme:",
         ":Clanne:",
-        
         ":Alfred2:",
         ":Etie:",
         ":Boucheron:",
@@ -16,7 +15,6 @@ let data = {
         ":Chloe:",
         ":Louis:",
         ":Jean:",
-        
         ":Diamant2:",
         ":Jade:",
         ":Amber:",
@@ -25,7 +23,6 @@ let data = {
         ":Lapis:",
         ":Yunaka:",
         ":Saphir:",
-        
         ":Ivy2:",
         ":Zelkov:",
         ":Kagetsu:",
@@ -34,7 +31,6 @@ let data = {
         ":Rosado:",
         ":Anna_Eng:",
         ":Lindon:",
-        
         ":Timerra2:",
         ":Merrin:",
         ":Panette:",
@@ -42,7 +38,6 @@ let data = {
         ":Pandreo:",
         ":Bunet:",
         ":Seadall:",
-        
         ":Veyle:",
         ":Nel:",
         ":Nil:",
@@ -58,9 +53,8 @@ let data = {
         ":Eve:",
         ":Morion:",
         ":Hyacinth:",
-        ":Seforia:",  
+        ":Seforia:",
         ":Sombron:"
-        
       ],
       [":Marth_E2:",
         ":Tiki_E:",
@@ -97,8 +91,6 @@ let data = {
         ":Nil2:",
         ":Veyle-2:",
         ":Marth-E:",
-        
-
       ]
     ]
   },
@@ -470,6 +462,7 @@ let data = {
         ":Sharena:",
         ":Anna:",
         ":Veronica:",
+        ":Veronica2:",
         ":Bruno:",
         ":Gustav:",
         ":Henriette:",
@@ -497,6 +490,8 @@ let data = {
         ":Plumeria:",
         ":Triandra:",
         ":Freyja:",
+        ":Eitr:",
+        ":Ginnungagap:",
         ":Reginn:",
         ":Otr:",
         ":Fafnir:",
@@ -509,10 +504,12 @@ let data = {
         ":Letizia:",
         ":Embla:",
         ":Seior:",
+        ":Gullveig:",
+        ":Kvasir:",
         ":Heidr:",
         ":Nerthuz:",
-        ":Gullveig:",
         ":Njordr:",
+        ":Ratatoskr:",
         ":Loki:",
         ":Thorr:"
       ],
